@@ -1,5 +1,4 @@
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -38,6 +37,12 @@ public class RahulShettyPractice {
 		Thread.sleep(2000);
 		country.sendKeys(Keys.chord(Keys.ARROW_DOWN,Keys.ARROW_DOWN, Keys.ENTER));
 		
+		File Source=country.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(Source, new File("logo.png"));        // getting screenshot of webElement.
+		
+	
+		
+		
 		System.out.println(driver.findElement(By.xpath("//legend[text()='Suggession Class Example']")).getText());
 		
 		
@@ -70,7 +75,7 @@ public class RahulShettyPractice {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		
-		FileUtils.copyFile(src, new File("C:\\Users\\ahmad\\Desktop\\Rahuls.png")); 
+		FileUtils.copyFile(src, new File("wholepage.png")); 
 		driver.close();
 		
 		driver.switchTo().window(Parent);
@@ -155,6 +160,8 @@ public class RahulShettyPractice {
 	
 	
 	driver.quit();
+	
+	
 	
 	
 	}
