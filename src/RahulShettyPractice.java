@@ -70,7 +70,7 @@ public class RahulShettyPractice {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		
-		FileUtils.copyFile(src, new File("C:\\Users\\ahmad\\Desktop\\Rahuls.png")); 
+		FileUtils.copyFile(src, new File("C:\\Users\\ahmad\\Desktop\\TA.png")); 
 		driver.close();
 		
 		driver.switchTo().window(Parent);
